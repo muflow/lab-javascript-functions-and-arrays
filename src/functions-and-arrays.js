@@ -1,11 +1,45 @@
 // Iteration #1: Find the maximum
+function maxOfTwoNumbers(n1, n2) {
+  if (n1 === n2) {
+    console.log('The two numbers are the same') 
+  } else if (n1 > n2) {
+    console.log(`${n1}`);
+   
+  } else {
+    console.log(`${n2}`);
+  }
+}
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
+let wordXl = '';
+
+function findLongestWord() {
+  
+  for(let i=0; i<words.length; i++) {
+    if(words[i].length > wordXl.length) {
+      wordXl = words[i];
+    }
+  }
+  return wordXl  
+} // todavia tengo que escribir la parte para las strngs con la misma length
+
+
+
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+let sum = 0;
+
+function sumNumbers (array) {
+  for (let i=0; i<array.length; i++) {
+  sum += array[i];
+  }
+  return sum
+}
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
