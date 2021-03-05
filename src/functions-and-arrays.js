@@ -39,19 +39,20 @@ function sumNumbers (array) {
 }
 
 
+
+
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(array) {
-  if(!array.length) {
+function averageNumbers(numbersArray) {
+  if (numbersArray.length === 0) {
     return null;
   }
-  
-  for(i=0; i<array.length; i++) {
-    sum += array[i];
-  }
-  return sum / array.length;
+
+  const sumOfNumbers = sumNumbers(numbersArray);
+
+  return sumOfNumbers / numbersArray.length;
 }
 
 
@@ -88,17 +89,20 @@ const wordsUnique = [
   'bring'
 ];
 
-let unArray = [];
+function uniquifyArray(stringsArray) {
+  if (stringsArray.length === 0) {
+    return null;
+  }
 
-function uniqueArr(array) {
-  for(i=0; i < array.length; i++){
-    if(unArray.indexOf(array[i]) === -1) {
-      unArray.push(array[i]);
+  const returnArray = [];
+
+  for (let i = 0; i < stringsArray.length; i += 1) {
+    if (returnArray.indexOf(stringsArray[i]) === -1) {
+      returnArray.push(stringsArray[i])
     }
   }
-  return unArray;
+  return returnArray;
 }
-
 
 
 
@@ -135,7 +139,11 @@ const wordsCount = [
   'matter'
 ];
 
-
+function howManyTimes() {
+  if(!array.length) {
+    return 0;
+    }
+}
 
 /*
 
